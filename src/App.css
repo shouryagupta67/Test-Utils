@@ -1,0 +1,22 @@
+.about{
+    text-decoration: none;
+    color:black;
+    cursor: pointer;
+}
+.about:hover{
+    opacity: 0.7;
+    
+
+   
+}
+.texta{
+    border: 1px solid rgb(8, 7, 7);
+}
+.test2{
+    background-color: rgba(150, 161, 161, 0.308);
+    padding: 14px;
+    border: 1px solid rgb(121, 121, 121);
+    border-radius: 7px;
+}
+
+    
