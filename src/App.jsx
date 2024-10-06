@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Alert from './components/Alert'
 import TextForm from './components/TextForm'
 import About  from './components/About'
+import Footer from './components/Footer'
 
 
 function App() {
@@ -54,7 +55,14 @@ function App() {
      
 
      </div>
-     <About/>
+     <About  mode={mode} />
+     <br />
+     <br />
+     <br />
+     <br />
+     <br />
+     <br />
+     <Footer/>
      </div>
      </>
   )
