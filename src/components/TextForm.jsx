@@ -3,6 +3,7 @@ import React,{useState} from 'react'
 
 export default function TextForm(props) {
   
+  
   const[text,setText]=useState('');
   const handerClick=()=>{
     let newText=text.toUpperCase();
@@ -33,21 +34,21 @@ export default function TextForm(props) {
     <>
      
   <div className="container"  style={{color: props.mode===`dark`?`white`:`black`}}>
-    <h1>{props.title}</h1>
+    <h1 className='mb-2'>{props.title}</h1>
    
-    <textarea class="form-control texta" id="exampleFormControlTextarea1" style={{backgroundColor: props.mode===`dark`?`grey`:`white`,color: props.mode===`dark`?`white`:`black`}} value={text} onChange={handleonChange} rows="8"></textarea>
-    <button className="btn btn-primary my-2 mx-2" onClick={handerClick}>Convert To Uppercase</button>
+    <textarea class="form-control texta" id="exampleFormControlTextarea1" style={{backgroundColor: props.mode===`dark`?`#13466e`:`white`,color: props.mode===`dark`?`white`:`#042743`}} value={text} onChange={handleonChange} rows="8"></textarea>
+    <button disabled={text.length===0} className="btn btn-primary my-2 mx-2" onClick={handerClick}>Convert To Uppercase</button>
 
-    <button className="btn btn-primary my-2 mx-3" onClick={handerlowClick}>Convert To Lowercase</button>
-    <button className="btn btn-primary my-2 mx-3" onClick={handerClear}>Clear</button>
-    <button className="btn btn-primary my-2 mx-3" onClick={handleCopy}>Copy</button>
+    <button disabled={text.length===0}  className="btn btn-primary my-2 mx-3" onClick={handerlowClick}>Convert To Lowercase</button>
+    <button disabled={text.length===0}  className="btn btn-primary my-2 mx-3" onClick={handerClear}>Clear</button>
+    <button disabled={text.length===0}  className="btn btn-primary my-2 mx-3" onClick={handleCopy}>Copy</button>
   </div>
   <div className="container my-5" style={{color: props.mode===`dark`?`white`:`black`}}>
     <h1>Your Text Summary</h1>
     <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} Characters</p>
-    <p>{0.008*text.split(" ").length } Mintes To read</p>
+    <p>{0.008*text.split(" ").filter((element)=>{return element.length!==0}).length } Mintes To read</p>
     <h2>Preview</h2>
-    <p>{text.length>0?text:"Enter Something To Preview"}</p>
+    <p>{text.length>0?text:"Nothing To Preview"}</p>
   </div>
   </>
   )

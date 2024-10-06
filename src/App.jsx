@@ -24,7 +24,7 @@ function App() {
     if(mode==='light'){
  
       setMode('dark')
-      document.body.style.backgroundColor='grey'
+      document.body.style.backgroundColor='#191970'
       ShowAlert("Dark Mode Enabled","success");
   
       
@@ -50,7 +50,7 @@ function App() {
   
      
   
-        <TextForm ShowAlert={ShowAlert} title="Enter your yext" mode={mode}/>
+        <TextForm ShowAlert={ShowAlert} title="TextUtils- Word Counter| Character Counter" mode={mode}/>
         
      
 
